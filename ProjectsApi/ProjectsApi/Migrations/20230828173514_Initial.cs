@@ -21,7 +21,7 @@ namespace ProjectsApi.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RepositoryLink = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TechnologiesUsed = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DataAdded = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DateTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

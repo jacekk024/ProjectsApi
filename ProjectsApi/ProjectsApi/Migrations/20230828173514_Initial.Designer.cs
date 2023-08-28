@@ -12,7 +12,7 @@ using ProjectsApi.Data;
 namespace ProjectsApi.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20230828152448_Initial")]
+    [Migration("20230828173514_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -33,7 +33,7 @@ namespace ProjectsApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("DataAdded")
+                    b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
