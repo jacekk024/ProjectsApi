@@ -1,17 +1,30 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.EntityFrameworkCore;
+using ProjectsApi.Data;
 
-// Add services to the container.
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+        // Add services to the container.
+        builder.Services.AddDbContext<ProjectContext>(options =>
+        options.UseSqlServer(
+        builder.Configuration.GetConnectionString("ProjectContext")));
 
-var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+        builder.Services.AddControllers();
 
-app.UseHttpsRedirection();
+        var app = builder.Build();
 
-app.UseAuthorization();
+        // Configure the HTTP request pipeline.
 
-app.MapControllers();
+        app.UseHttpsRedirection();
 
-app.Run();
+        app.UseAuthorization();
+
+        app.MapControllers();
+
+        app.Run();
+    }
+}
