@@ -12,8 +12,8 @@ using ProjectsApi.Data;
 namespace ProjectsApi.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20230828173514_Initial")]
-    partial class Initial
+    [Migration("20230831222839_Iniatial")]
+    partial class Iniatial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,14 +33,14 @@ namespace ProjectsApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("DateTime")
+                    b.Property<DateTime>("DateAdded")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RepositoryLink")
+                    b.Property<string>("RepositoryUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
