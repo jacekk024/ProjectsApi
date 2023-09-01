@@ -28,12 +28,11 @@ An API for managing portfolio projects. Create, update, delete, and retrieve pro
 ```
 
 ### GET
-    Request:
+Request:
 ```
     GET /api/Projects
 ```
-
-    Response Body:
+Response Body:
 ```
     [
     {
@@ -63,12 +62,12 @@ An API for managing portfolio projects. Create, update, delete, and retrieve pro
     ]
 ```
 
-    Request:
+Request:
 ```
     GET /api/Projects/{1}
 ```
 
-    Response Body:
+Response Body:
 ```
     {
     "id": 1,
