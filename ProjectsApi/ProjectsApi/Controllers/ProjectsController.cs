@@ -43,15 +43,13 @@ namespace ProjectsApi.Controllers
         }
 
         //POST: api/Projects
+        [HttpPost]
         public async Task<ActionResult<Project>> PostProject(Project project) 
         {
             if (project == null)
             {
                 return BadRequest("Provided project is null.");
             }
-
-            // Można dodać więcej walidacji dla 'project', np. sprawdzając czy pewne pola nie są puste.
-
             try
             {
                 projectContext.Projects.Add(project);
@@ -63,6 +61,54 @@ namespace ProjectsApi.Controllers
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
+        }
+
+        // PUT: api/Projects/5
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutMovie(int id, Project project)
+        {
+            if (id != project.Id)
+                return BadRequest();
+
+
+            projectContext.Entry(project).State = EntityState.Modified;
+            try
+            {
+                await projectContext.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!MovieExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                    throw;
+            }
+            return NoContent();
+        }
+        private bool MovieExists(int id)
+        {
+            return (projectContext.Projects?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        // Delete
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteMovie(int id)
+        {
+            if (projectContext.Projects == null)
+            {
+                return NotFound();
+            }
+            var movie = await projectContext.Projects.FindAsync(id);
+            if (movie == null)
+            {
+                return NotFound();
+            }
+            projectContext.Projects.Remove(movie);
+            await projectContext.SaveChangesAsync();
+            return NoContent();
         }
     }
 }
