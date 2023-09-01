@@ -29,9 +29,9 @@ An API for managing portfolio projects. Create, update, delete, and retrieve pro
 
 ### GET
     Request:
-    ```
-        GET /api/Projects
-    ```
+```
+    GET /api/Projects
+```
 
     Response Body:
 ```
@@ -64,9 +64,9 @@ An API for managing portfolio projects. Create, update, delete, and retrieve pro
 ```
 
     Request:
-    ```
-        GET /api/Projects/{1}
-    ```
+```
+    GET /api/Projects/{1}
+```
 
     Response Body:
 ```
