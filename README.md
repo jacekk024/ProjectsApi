@@ -15,7 +15,7 @@ An API for managing portfolio projects. Create, update, delete, and retrieve pro
     * List the technologies used in each project.
 
 ## Installation & Setup
-1.Clone the Repository:
+1. Clone the Repository:
  ```git clone [https://github.com/jacekk024/ProjectsApi]```
 2. Navigate to the project directory:
 ```cd ProjectsApi```
