@@ -78,6 +78,33 @@ Response Body:
     "dateAdded": "2023-09-01T10:38:29.814"
     }  
 ```
+### POST
+Request:
+```
+    POST /api/Projects
+```
+Example Value:
+```
+{
+  "id": 0,
+  "title": "New project",
+  "description": "new test project",
+  "repositoryUrl": "none",
+  "technologiesUsed": "none",
+  "dateAdded": "2023-09-01T14:36:57.773Z"
+}
+```
+Response Body:
+```
+{
+  "id": 5,
+  "title": "New project",
+  "description": "new test project",
+  "repositoryUrl": "none",
+  "technologiesUsed": "none",
+  "dateAdded": "2023-09-01T14:36:57.773Z"
+}
+```
 
 
 
