@@ -1,6 +1,6 @@
 # ProjectsApi
 
-An API for managing portfolio projects. Create, update, delete, and retrieve projects from your portfolio. Incorporate images, links, descriptions, technologies used, and more.
+An API for managing portfolio projects. Create, update, delete, and retrieve projects from your portfolio. Incorporate links, descriptions, technologies used, and more.
 
 ## Features
 
