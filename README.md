@@ -32,52 +32,54 @@ An API for managing portfolio projects. Create, update, delete, and retrieve pro
     ```
     GET /api/Projects
     ```
+
     Response Body:
     ```
     [
-  {
+    {
     "id": 1,
     "title": "Stock-App",
     "description": "Finance App",
     "repositoryUrl": "https://github.com/jacekk024/Stock-App",
     "technologiesUsed": "React Native,JavaScript",
     "dateAdded": "2023-09-01T10:38:29.814"
-  },
-  {
+    },
+    {
     "id": 3,
     "title": "Keyboard-Master",
     "description": "App for training speed of typing",
     "repositoryUrl": "https://github.com/jacekk024/Keyboard-Master",
     "technologiesUsed": "C#,.NET Core,WPF,MVVM",
     "dateAdded": "2023-09-01T10:38:29.814"
-  },
-  {
+    },
+    {
     "id": 4,
     "title": "Portfolio",
     "description": "My personal web page",
     "repositoryUrl": "https://github.com/jacekk024/portfolio",
     "technologiesUsed": "html,js,css",
     "dateAdded": "2023-09-01T10:54:22.076"
-  }
-]
-```
+    }
+    ]
+    ```
+
 ### GET
     Request:
     ```
-    GET /api/Projects/{1}
+        GET /api/Projects/{1}
     ```
+    
     Response Body:
     ```
-{
-  "id": 1,
-  "title": "Stock-App",
-  "description": "Finance App",
-  "repositoryUrl": "https://github.com/jacekk024/Stock-App",
-  "technologiesUsed": "React Native,JavaScript",
-  "dateAdded": "2023-09-01T10:38:29.814"
-}
-    
-    ```
+    {
+    "id": 1,
+    "title": "Stock-App",
+    "description": "Finance App",
+    "repositoryUrl": "https://github.com/jacekk024/Stock-App",
+    "technologiesUsed": "React Native,JavaScript",
+    "dateAdded": "2023-09-01T10:38:29.814"
+    }  
+```
 
 
 
