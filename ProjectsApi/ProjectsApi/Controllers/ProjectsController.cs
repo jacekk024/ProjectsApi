@@ -10,10 +10,11 @@ namespace ProjectsApi.Controllers
     public class ProjectsController : ControllerBase
     {
         private readonly ProjectContext projectContext;
-
-        public ProjectsController(ProjectContext projectContext)
+        private readonly MySQLProjectContext mySqlProjectContext;
+        public ProjectsController(ProjectContext projectContext, MySQLProjectContext mySqlProjectContext)
         {
             this.projectContext = projectContext;
+            this.mySqlProjectContext = mySqlProjectContext; 
         }
 
         // GET: api/Projects
