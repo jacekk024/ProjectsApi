@@ -14,4 +14,15 @@ namespace ProjectsApi.Data
         public DbSet<Project> Projects { get; set; }
 
     }
+    public class MySQLProjectContext : DbContext
+    {
+        public MySQLProjectContext(DbContextOptions<MySQLProjectContext> options)
+            : base(options)
+        {
+
+        }
+
+        public DbSet<Project> Projects { get; set; }
+
+    }
 }
